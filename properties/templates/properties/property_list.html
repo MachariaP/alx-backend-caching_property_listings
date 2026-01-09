@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Property Listings</title>
+</head>
+<body>
+    <h1>Property Listings</h1>
+    <ul>
+        {% for property in properties %}
+        <li>
+            <h3>{{ property.title }}</h3>
+            <p>{{ property.description }}</p>
+            <p>Price: ${{ property.price }}</p>
+            <p>Location: {{ property.location }}</p>
+            <p>Created: {{ property.created_at }}</p>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
